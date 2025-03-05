@@ -1,0 +1,11 @@
+the password hash is 40 bits so it is SHA 1
+(MD5 = 32 chars, SHA 256 = 64)
+
+The program takes our password input, hashes it and then compares it with the hash stored in password.txt
+if we delete password.txt there is a zsh: segmentation fault
+
+Solution 1
+Hash lots of passwords till we find a matching one
+
+Solution 2
+Modify the password stored to match ours

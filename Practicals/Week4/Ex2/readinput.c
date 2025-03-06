@@ -5,17 +5,15 @@
 #include <string.h>
 
 int main(){
-	//get user input
-	char input[50];
-	printf("To Write To File: ");
-	fgets(input, sizeof(input), stdin);
 	
 	//open file
 	int fd;
-	fd = open("output.txt", O_WRONLY|O_CREAT|O_TRUNC, S_IRUSR, S_IWUSR);
+	fd = open("input.txt", O_RDONLY);
 	
-	//write to file
-	write(fd, input, strlen(input));
+	//read from file
+	read(fd, input, strlen(input));
+	
+	//print to terminal
 	printf("Your input has been written to output.txt");
 	
 	//close file

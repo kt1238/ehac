@@ -1,0 +1,1 @@
+this is the information to be copied to destination.txt

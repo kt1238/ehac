@@ -1,2 +1,5 @@
 perl -pe 's/([0-9A-Fa-f]{2})/chr hex $1/ge' < flag.txt
+
 printf '%s' "password" | sha1sum
+
+invoke-rc.d ssh start //restarts ssh

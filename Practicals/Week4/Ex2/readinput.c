@@ -11,10 +11,13 @@ int main(){
 	fd = open("input.txt", O_RDONLY);
 	
 	//read from file
-	read(fd, input, strlen(input));
+	char buffer[256];
+	ssize_t bytes_read;
 	
-	//print to terminal
-	printf("Your input has been written to output.txt");
+	while ((bytes_read = read(fd, buffer, sizeof(buffer))) > 0) { //while bytes_read is > 0
+		//print to terminal
+		write(STDOUT_FILENO, buffer, bytes_read);
+	}
 	
 	//close file
 	close(fd);

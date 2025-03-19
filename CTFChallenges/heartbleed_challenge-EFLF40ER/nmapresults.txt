@@ -1,0 +1,13 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-19 10:23 EDT
+Nmap scan report for ehacgw01.cs.york.ac.uk (144.32.50.33)
+Host is up (2.1s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+443/tcp   open  https
+2000/tcp  open  cisco-sccp
+6005/tcp  open  X11:5
+16992/tcp open  amt-soap-http
+
+Nmap done: 1 IP address (1 host up) scanned in 8.82 seconds

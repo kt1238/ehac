@@ -1,0 +1,20 @@
+<h3>Cross-site scripting (XSS)</h3>
+<p>
+  To complete the challenges you need <b>Internet</b> access and <b>a web server</b> from where run the code provided.
+  <br />
+  You can use our Kali VM of reference to complete the challenges:
+  <ol>
+    <li>copy the challenge zip file to your VM user's home page that you created in the very first introductory challenge</li>
+    <li>login as your chosen &lt;username&gt; in the VM</li>
+    <li>create the directory <tt>public_html</tt> in the home directory</li>
+    <li>change to it, <tt>cd public_html</tt></li>
+    <li>unzip the challenge with the command <tt>unzip &lt;complete-path-to-the-challenge&gt;</tt></li>
+    <li>run the command <tt>sudo a2enmod userdir</tt> to enable this web page</li>
+    <li>run the command <tt>sudo apache2ctl restart</tt> to start or restart the web server</li>
+    <li>surf to the page http://localhost/~&lt;your-user&gt;/xss_challenge-&lt;your-token&gt;/xss/ from a Firefox tab in the VM</li>
+    <li>enjoy the challenges!</li>
+    <li>(make sure you have set execution permissions to your homepage, as well as to <tt>public_html</tt>)</li>
+  </ol>
+  <br />
+  <b>You have to solve at least the first three challenges to get the flag.</b>
+</p>

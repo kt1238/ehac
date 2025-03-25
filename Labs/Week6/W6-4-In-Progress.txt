@@ -16,3 +16,6 @@ An adversary could modify the url like so
 and then has access the passwd file
 
 This can be prevented by sanitizing user input, starting from a base directory, and throwing errors if we do not load from this base directory
+
+Task 3:
+?

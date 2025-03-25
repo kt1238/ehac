@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XSS Challenges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="XSS challenges" />
+    <meta name="author" content="Roberto Metere" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <style type="text/css" media="all">
+      @import url("css/xss-learn.css");
+    </style>
+  </head>
+<body>
+  <!-- Control bar -->
+  <div>
+    <h2>XSS Challenges</h2>
+    <div class="table-responsive shadow">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="row">Challenge</th>
+            <th scope="col">1<sup>st</sup></th>
+            <th scope="col">2<sup>nd</sup></th>
+            <th scope="col">3<sup>rd</sup></th>
+            <th scope="col">4<sup>th</sup></th>
+            <th scope="col">5<sup>th</sup></th>
+            <th scope="col">6<sup>th</sup></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td><a href="?level=1" id="try-button-1" class="d-none"></a></td>
+            <td><a href="?level=2" id="try-button-2" class="d-none"></a></td>
+            <td><a href="?level=3" id="try-button-3" class="d-none"></a></td>
+            <td><a href="?level=4" id="try-button-4" class="d-none"></a></td>
+            <td><a href="?level=5" id="try-button-5" class="d-none"></a></td>
+            <td><a href="?level=6" id="try-button-6" class="d-none"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div id="too-fast-champion">
+    <p>You should solve previous challenges before</p>
+  </div>
+  
+  <div id="flag-wizard" class="d-none"></div>
+  
+  <div id="instructions"></div>
+  <div id="next-controls">
+    <a class="next-button" href="/level2">Advance to next level &gt;&gt;</a>
+  </div>
+  
+  <div id="browser-simulator" class="shadow">
+    <div>Web Browser</div>
+    <div id="browser-title">No title</div>
+    <div>
+      <div class="col-auto">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">address</div>
+          </div>
+          <input id="address-bar" type="text" class="form-control" id="inlineFormInputGroup" placeholder="http://">
+          <input id="browser-go" class="urlbutton" value="Go" onclick="" type="Submit">
+        </div>
+      </div>
+    </div>
+    <iframe id="browser-content" src=""></iframe>
+  </div>
+  
+  <h2>Target code (<a id="toggle-code" href="#">toggle</a>)</h2>
+  <iframe id="source-frame" src=""></iframe>
+  <div id="hints"></div>
+  
+  <script src="js/xss-learn.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

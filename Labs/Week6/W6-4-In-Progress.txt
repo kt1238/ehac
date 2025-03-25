@@ -1,0 +1,18 @@
+Task 1:
+passwd file contains rows of
+- User Name
+- Encrypted Password (stored in /etc/shadow)
+- User ID number
+- User Group ID number
+- Full Name of User (GECOS)
+- User Home Directory
+- Default Shell
+
+Task 2:
+If a webpage is loading a file from the server using a command like
+?filename = "rsc/images/demo.png"
+An adversary could modify the url like so
+?filename = "../../../etc/passwd"
+and then has access the passwd file
+
+This can be prevented by sanitizing user input, starting from a base directory, and throwing errors if we do not load from this base directory

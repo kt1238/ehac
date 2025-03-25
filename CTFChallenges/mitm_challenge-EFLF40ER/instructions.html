@@ -1,0 +1,46 @@
+<h3>You own the channel, then what?</h3>
+<style>table.mitm{margin-top:20px;}table.mitm td{border:1px solid black;padding:3px 10px;}pre{color:white;}</style>
+<p>
+  You have to break the following protocol in order to get your flag.
+  <pre>
+    A -> S: A, B
+    S -> A: {#K, {K}KBS}KAS
+    A -> B: {K}KBS, {flag}K 
+  </pre>
+  Where <tt>#</tt> means that such value is freshly sampled at random, and <tt>{msg}k</tt> means that <tt>msg</tt> is encrypted with key <tt>k</tt>.
+  <ul>
+    <li>There are three machines playing the protocol, A, S, and B.</li>
+    <li>The protocol aims to let A and B exchange a secret session key and a secret message.</li>
+    <li>You automatically intercept and block each message pushed to the insecure channel.</li>
+    <li>As the attacker you can manipulate all the messages before forwarding them.</li>
+    <li>Interestingly, the server S recognises your token as an entity, and you both share the key which is located in the file <tt>mitm-EFLF40ER.sh</tt> in the variable KMS.</li>
+  </ul>
+
+  <br />
+  You have complete control of the communication channel, so you are the man-in-the-middle.
+  <br />
+  This is simulated through a web server, and you already have prepared some convenient scripts.
+  The script <tt>mitm-EFLF40ER.sh</tt> executes the protocol cleanly in the way it was meant to run.
+  You are also provided with a decryption script <tt>decrypt</tt> which uses openssl to decrypt a given ciphertext.
+  The encryption takes a message and a key and produces a ciphertext as an output which is structured as the following:<br />
+  <table class="mitm">
+    <tr>
+      <td>0-15 bytes</td>
+      <td>16-47 bytes</td>
+      <td>48-+ bytes</td>
+    </tr>
+    <tr>
+      <td>IV</td>
+      <td><i>ignore<i></td>
+      <td>ciphertext</td>
+    </tr>
+  </table>
+  <ul>
+    <li>First 16 bytes are the IV.</li>
+    <li>Next 32 bytes are verification data which <strong>you won't need</strong>.</li>
+    <li>The remaining bytes are the ciphertext.</li>
+    <li>The encryption algorithm is AES-256-CBC.</li>
+  </ul>
+  
+  <strong>Good luck message!</strong>
+</p>

@@ -1,0 +1,24 @@
+<h3>Activate some dead code</h3>
+<style>tt {color:whitesmoke;background-color:black;display:inline-block;margin:0px 5px 0px 5px;padding:2px 10px;border:1px #666666 solid;border-radius:4px;}</style>
+<p>
+  You need to find the password for remotely disarming all atomic weapons of Ruritania (that's coincidentally your flag).
+  A smart computer scientist has hidden such password into some dead code in a binary executable file.
+  However, the binary file suffers from buffer overflow in its input.
+  How to outsmart the smart computer scientist?
+  To do that you need to find a suitable input to the vulnerable binary file that runs the piece of dead code which will reveal the hidden piece of information.
+  <br />
+  Some commands which can be useful (or not):
+  <ul>
+    <li><tt>objdump -d &lt;binary-file&gt;</tt> disassembles the whole content of an executable.</li>
+    <li><tt>perl -e 'print "A" x 10'</tt> prints the character 'A' for 10 times.</li>
+    <li><tt>perl -e 'print "A" x 10 . "BBBB" '</tt> prints the character 'A' for 10 times followed by 4 Bs.</li>
+    <li><tt>gdb &lt;binary-file&gt;</tt> starts in the GNU Debugger on an executable.
+    In this environment, you can type the following commands:</li>
+    <ul>
+      <li><tt>run</tt> to starts the program.</li>
+      <li><tt>break &lt;address&gt;</tt> to introduce a break-point at the address, e.g. </tt>*0x08048441</tt>.</li>
+      <li><tt>cont</tt> to continue after a breakpoint.</li>
+      <li><tt>x/16x $ebp</tt> to print out 16 bytes stored at the address pointed by the frame pointer.</li>
+    </ul>
+  </ul>
+</p>

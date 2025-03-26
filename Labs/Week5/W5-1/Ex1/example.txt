@@ -1,0 +1,10 @@
+files can be accessed in three ways:
+r - read from
+w - written to 
+x - executed
+
+permission for these access types are split based on
+
+u - user who created the file
+g - group of owner of the file
+o - other users

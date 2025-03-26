@@ -1,0 +1,30 @@
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.028 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.035 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.037 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.044 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=5 ttl=64 time=0.037 ms
+
+--- localhost ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4085ms
+rtt min/avg/max/mdev = 0.028/0.036/0.044/0.005 ms
+PING localhost (::1) 56 data bytes
+64 bytes from localhost (::1): icmp_seq=1 ttl=64 time=0.031 ms
+64 bytes from localhost (::1): icmp_seq=2 ttl=64 time=0.039 ms
+64 bytes from localhost (::1): icmp_seq=3 ttl=64 time=0.039 ms
+64 bytes from localhost (::1): icmp_seq=4 ttl=64 time=0.040 ms
+64 bytes from localhost (::1): icmp_seq=5 ttl=64 time=0.038 ms
+
+--- localhost ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4087ms
+rtt min/avg/max/mdev = 0.031/0.037/0.040/0.003 ms
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.024 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.124 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.039 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.044 ms
+64 bytes from localhost (127.0.0.1): icmp_seq=5 ttl=64 time=0.037 ms
+
+--- localhost ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4100ms
+rtt min/avg/max/mdev = 0.024/0.053/0.124/0.035 ms

@@ -1,0 +1,14 @@
+PING google.com (216.58.204.78) 56(84) bytes of data.
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=1 ttl=255 time=14.8 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=2 ttl=255 time=18.2 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=3 ttl=255 time=20.9 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=4 ttl=255 time=19.6 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=5 ttl=255 time=16.8 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=6 ttl=255 time=25.8 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=7 ttl=255 time=17.9 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=8 ttl=255 time=17.2 ms
+64 bytes from lhr25s13-in-f78.1e100.net (216.58.204.78): icmp_seq=9 ttl=255 time=21.2 ms
+
+--- google.com ping statistics ---
+9 packets transmitted, 9 received, 0% packet loss, time 8011ms
+rtt min/avg/max/mdev = 14.840/19.166/25.818/3.029 ms

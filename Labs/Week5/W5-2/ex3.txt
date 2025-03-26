@@ -1,0 +1,10 @@
+PING cisco.com (72.163.4.185) 56(84) bytes of data.
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=1 ttl=255 time=123 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=2 ttl=255 time=119 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=3 ttl=255 time=122 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=4 ttl=255 time=115 ms
+64 bytes from redirect-ns.cisco.com (72.163.4.185): icmp_seq=5 ttl=255 time=125 ms
+
+--- cisco.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4009ms
+rtt min/avg/max/mdev = 115.476/120.864/125.166/3.352 ms

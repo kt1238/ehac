@@ -1,0 +1,9 @@
+First you need to figure out which field is vulnerable to SQL injection, so at least it should use SQL entries. The field where you can search for words does not work (no attempts are left), while the top-right login field might be a good candidate.
+Unfortunately after you inspect the code, you can see that this field does not use SQL but a client-side hash test that brings to fulldictionary.php.
+Surfing directly to fulldictionary.php does not work as it requires that the referring page (the previous page which submitted the form) is the login page.
+At this point, you could potentially crack the hash (not really) or try to bypass it with burpsuite for example, or simply rewriting the DOM to redirect to the paid page by replacing onclick="checkPassword();" with onclick="location.href='fulldictionary.php'".
+Now you see a working word search that is likely using the database as if you insert the word flag it gets translated to French.
+We suspect that this SQL is using a SELECT from some table where the English word is the one you choose. So one technique we may want to use is the union of select.
+We also notice that the result is only the first one, so we need to use a non-existing word to nullify the first legitimate SELECT. To do that we can insert ' union SELECT TABLE_NAME FROM information_schema.tables; -- - to extract table names; one is FullDictionary for example.
+FullDictionary however is likely the legitimate table for translating; so we look for other tables with injections that look like ' union SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_NAME != 'FullDictionary'; -- - (to exclude answers that we do not need).
+This will lead you to find the table SecretTOKEN. Here you start querying its content with ' union SELECT * FROM SecretTOKEN -- -.

@@ -41,14 +41,21 @@ function injectA() {
 # ---------------------------------------------------------------------
 
 function mitm() {
-  # Run the protocol
-  step1=$(wget --no-check-certificate -q -O - "$WEBSERVICE_TO_HACK/A.php?step=1")
-  echo "$step1"
+  echo "[*] Running MITM attack..."
+
+  # Step 1: Forge A's message using your token Z6NGZBDO
+  step1="data: $(echo -n 'A,Z6NGZBDO' | base64)"
+  echo -e "\nA -> S: $(echo -n 'A,Z6NGZBDO' | base64)"
+
+  # Step 2: Send forged message to S
   step2=$(wget --no-check-certificate -q -O - "$WEBSERVICE_TO_HACK/S.php?step=2&data=$(injectS "$step1")")
-  echo "$step2"
+  echo -e "\nS -> A: $(get_b64_output "$step2")"
+
+  # Step 3: Send S's message to A
   step3=$(wget --no-check-certificate -q -O - "$WEBSERVICE_TO_HACK/A.php?step=3&data=$(injectA "$step2")")
-  echo "$step3"
-  printf "\n$(wget --no-check-certificate -q -O - "$WEBSERVICE_TO_HACK/B.php?step=4&data=$(sanitise_b64 $(get_b64_output "$step3") )")\n"
+  echo -e "\nA -> B: $(get_b64_output "$step3")"
+
+  echo -e "\n[*] Use the A -> B base64 output above for manual splitting and decryption."
 }
 # ---------------------------------------------------------------------
 

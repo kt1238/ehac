@@ -1,0 +1,85 @@
+└─# ./mitm-EFLF40ER.sh 
+A -> S: QSxC
+S -> A: 3M9Sd1HOsqLJF2BeH6T+f1SmLgMRh5TLqk2ISQmfEKQx9NwiaK/b7gibRvHz36XmUCrYVX2e5NTfMUzaEKCucLCHqIw//Yc/0CvcLvycd8biXNVr3IMg8vyDiV6wwjBhSTMABDD+r2+aNRG9Pon6i6PJ/aw5o2Y7z8Nm9l44YA0hRY7/1PvzVz4tHyJ8r5wZUil8TyvvuohAmdldbrujMAaEeDeIj0bLoKRCNTPioFI4W9vaKaR3vBlnW9mLmN73
+A -> B: CwLMFMswnY5v/RZFQEYpnSqE0Xd0xqVIKMQA2saXfJ6oWEi4wT65Ym0vLSiSkQyO0O/CIKW5PoZcivouI+xndZFF8PhuNrpJ07VMP7tJbbhAMdM9j0aHtVQ+CQk7e/1wLDiIT4O8Ag7icuYV20PfK7b5PZC9U9ky+M56IpGWZAZN1wtAMRToYLCFoSy+Ik9Np+Rof3O2MXGNyB5I+Tlndzu75EKtFLKTLGs2y6hXLi5oi16btxMylpjnDdG1IBQ8h/8YB9FNBnCyJ0Urt/w8Rkk=
+
+Protocol executed correctly, B knows the flag - Hint: comma position 96.
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# ./mitm-EFLF40ER.sh
+[*] Running MITM attack...
+
+A -> S: QSxaNk5HWkJETw==
+
+S -> A: SeNWzm373UG4lPDcL9RNP9P6dCXyBrUWIcvwwQ8XMOR3l5dgn7PcaXLKKfRlStN24PKDDUNDNFApynOh3svadvidyldxeTyESBTwq5n9GjB8NIvYBLeUGG4FB4OBL2r0Iv+aff9vNVRRDXsW6e0uvBuEH3LMpmNlklIw8Q9WhmxazNvZ22ArhYTquXBWr3rGdOOu2CaskVct2ZyGmbrfPyTf47R/S6q/RoJHDCNIL9uYiDPS+OGFYUDKimdJ2XAY7srUb83gMbrWqieYf4sO1uivU3wXbr5zwIKLwOuXS9g=
+
+A -> B: a2O6K5PRluib2Y9NQ8Lpy1Nu0wG60OcsUumxi1h0GMhyE8x/mMAq5mdKjpkSkD53IH9EsomMqr1uAawB333vVpDLbYNxqhThUKBSfCHReNV4+a/ldfhp/qS4RPmtiEcVfPD2rNcXHsZJ7F/XSVCFgiwtagmmZDjqr18SrYZ+PHaq7djV5AgZH0NlzRWvBuVxrSKaG/KngBbVUI1UIjCozC56NXR7FLp8cSiL8qMdInkPQslapGe3A0GSxD1GSed8Hw==
+
+[*] Use the A -> B base64 output above for manual splitting and decryption.
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# ./mitm-EFLF40ER.sh
+[*] Running MITM attack...
+
+A -> S: QSxaNk5HWkJETw==
+
+S -> A: j26a6+WlC8y3eqjclwKUMUMfQ2VTjtMhQ7UhT0SvNjEz9EhO4N2fT4k7ovZ8YkdRIdySdT+wt1BL+jc+4mwzodyLkD5SoohurkzHdCT+0kP+5Kb/5AYuIOcYg5w7+D8RO4Hy/mRuaEJD+uMtJBs/hJ9Ooz/RZb8ka0stAkEURqxK3ZPR4I30k+ueiWJqpsazmFO0D7mmwOgGAo/J0qQSRzb2+LHKZ8wiWS/ahzXQGFtdcLUPkWFW6jZACV8Vl7su+50GPDQrX/yz3NAdZN9qLw==
+
+A -> B: 65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xfywQYdnLaPA7BFIiTJLftJ3xtxTB7T2izVoi/ru1JdSA1ITZc5yfsa0P3+79VwjN9XOTiqIwn8buozpHhQPj8zkhDKR49Kn
+
+[*] Use the A -> B base64 output above for manual splitting and decryption.
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# ech -n"65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xo                                                  
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n"65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xo" | base64 -d | cut -b 1-96 > first.txt
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n "65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xo" | base64 -d | cut -b 1-96 > first.txt
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n "65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xo" |base64 -d | cut -b 1-96 > first.txt 
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n"65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xo" |base64 -d | cut -b 1-96 > first.txt 
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n"65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xfywQYdnLaPA7BFIiTJLftJ3xtxTB7T2izVoi/ru1JdSA1ITZc5yfsa0P3+79VwjN9XOTiqIwn8buozpHhQPj8zkhDKR49Kn" |base64 -d | cut -b 1-96 > first.txt
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n"65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xfywQYdnLaPA7BFIiTJLftJ3xtxTB7T2izVoi/ru1JdSA1ITZc5yfsa0P3+79VwjN9XOTiqIwn8buozpHhQPj8zkhDKR49Kn" |base64 -d |cut -b 1-96 > first.txt 
+base64: invalid input
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n "65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xfywQYdnLaPA7BFIiTJLftJ3xtxTB7T2izVoi/ru1JdSA1ITZc5yfsa0P3+79VwjN9XOTiqIwn8buozpHhQPj8zkhDKR49Kn" |base64 -d |cut -b 1-96 > first.txt
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# echo -n "65W/vAry6RJ1Bl95trl5pEfU5AQNF24cswyV8yR+e4XYMQPq2mpLJoAkn3TiNxpF7PRVhhINBEqpDWZuTadOsXyde0Poed7rEFzhmUUIg0i5gpeP1m7ekfZAxkZnqIHYLCtHBFzixWg8xfywQYdnLaPA7BFIiTJLftJ3xtxTB7T2izVoi/ru1JdSA1ITZc5yfsa0P3+79VwjN9XOTiqIwn8buozpHhQPj8zkhDKR49Kn" |base64 -d |cut -b 98- > second.txt
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# cat first.txt|cut -b 1-16|tr -d"\n"|xxd -p
+tr: invalid option -- '\'
+Try 'tr --help' for more information.
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# cat first.txt|cut -b 1-16|tr -d "\n"|xxd -p
+eb95bfbcf2e91275065f79b6b979a447d4e4040d
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# cat first.txt|cut -b 49-|tr -d "\n"|base64
+DQRKqQ1mbk2nTrF8nXtD6Hne6xBc4ZlFCINIuYKXj9Zu3pH2QMZGZ6iB2CwrRwRc
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# ./decrypt "eb95bfbcf2e91275065f79b6b979a447d4e4040d" "1038124470796232051142314336935567989102563 "
+Syntax: ./decrypt <iv-hex> <password-plain> <ciphertext-b64>
+                                                                    
+┌──(root㉿kali)-[~/Desktop/ehac/CTFChallenges/mitm_challenge-EFLF40ER]
+└─# ./decrypt "eb95bfbcf2e91275065f79b6b979a447d4e4040d" "1038124470796232051142314336935567989102563" "DQRKqQ1mbk2nTrF8nXtD6Hne6xBc4ZlFCINIuYKXj9Zu3pH2QMZGZ6iB2CwrRwRc"
+hex string is too long, ignoring excess
+./decrypt: line 13: warning: command substitution: ignored null byte in input
+WR��/��K/���CR�QLFE���`�/��`sn�'S��>p�
